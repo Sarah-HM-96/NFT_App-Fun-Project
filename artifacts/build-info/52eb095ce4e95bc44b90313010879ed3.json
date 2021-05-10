@@ -1,0 +1,350 @@
+{
+  "id": "52eb095ce4e95bc44b90313010879ed3",
+  "_format": "hh-sol-build-info-1",
+  "solcVersion": "0.7.3",
+  "solcLongVersion": "0.7.3+commit.9bfce1f6",
+  "input": {
+    "language": "Solidity",
+    "sources": {
+      "contracts/NFTAuction.sol": {
+        "content": "pragma solidity ^0.7.3;\r\n\r\ncontract NFTAuction {\r\n    struct Auction {\r\n        uint id;\r\n        address payable seller;\r\n        string name;\r\n        string description;\r\n        uint min;\r\n        uint end;\r\n        uint bestOfferId;\r\n        uint[] offerIds;\r\n    }\r\n}"
+      }
+    },
+    "settings": {
+      "optimizer": {
+        "enabled": false,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "output": {
+    "contracts": {
+      "contracts/NFTAuction.sol": {
+        "NFTAuction": {
+          "abi": [],
+          "evm": {
+            "bytecode": {
+              "generatedSources": [],
+              "linkReferences": {},
+              "object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122044305f49cdbaad65a7e64af1d4df124417d01ea7b087efe66cef5523e361639c64736f6c63430007030033",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DIFFICULTY ADDRESS 0x5F 0x49 0xCD 0xBA 0xAD PUSH6 0xA7E64AF1D4DF SLT DIFFICULTY OR 0xD0 0x1E 0xA7 0xB0 DUP8 0xEF 0xE6 PUSH13 0xEF5523E361639C64736F6C6343 STOP SMOD SUB STOP CALLER ",
+              "sourceMap": "27:246:0:-:0;;;;;;;;;;;;;;;;;;;"
+            },
+            "deployedBytecode": {
+              "generatedSources": [],
+              "immutableReferences": {},
+              "linkReferences": {},
+              "object": "6080604052600080fdfea264697066735822122044305f49cdbaad65a7e64af1d4df124417d01ea7b087efe66cef5523e361639c64736f6c63430007030033",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DIFFICULTY ADDRESS 0x5F 0x49 0xCD 0xBA 0xAD PUSH6 0xA7E64AF1D4DF SLT DIFFICULTY OR 0xD0 0x1E 0xA7 0xB0 DUP8 0xEF 0xE6 PUSH13 0xEF5523E361639C64736F6C6343 STOP SMOD SUB STOP CALLER ",
+              "sourceMap": "27:246:0:-:0;;;;;"
+            },
+            "methodIdentifiers": {}
+          }
+        }
+      }
+    },
+    "errors": [
+      {
+        "component": "general",
+        "errorCode": "1878",
+        "formattedMessage": "contracts/NFTAuction.sol: Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n",
+        "message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+        "severity": "warning",
+        "sourceLocation": {
+          "end": -1,
+          "file": "contracts/NFTAuction.sol",
+          "start": -1
+        },
+        "type": "Warning"
+      }
+    ],
+    "sources": {
+      "contracts/NFTAuction.sol": {
+        "ast": {
+          "absolutePath": "contracts/NFTAuction.sol",
+          "exportedSymbols": {
+            "NFTAuction": [
+              20
+            ]
+          },
+          "id": 21,
+          "nodeType": "SourceUnit",
+          "nodes": [
+            {
+              "id": 1,
+              "literals": [
+                "solidity",
+                "^",
+                "0.7",
+                ".3"
+              ],
+              "nodeType": "PragmaDirective",
+              "src": "0:23:0"
+            },
+            {
+              "abstract": false,
+              "baseContracts": [],
+              "contractDependencies": [],
+              "contractKind": "contract",
+              "fullyImplemented": true,
+              "id": 20,
+              "linearizedBaseContracts": [
+                20
+              ],
+              "name": "NFTAuction",
+              "nodeType": "ContractDefinition",
+              "nodes": [
+                {
+                  "canonicalName": "NFTAuction.Auction",
+                  "id": 19,
+                  "members": [
+                    {
+                      "constant": false,
+                      "id": 3,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 19,
+                      "src": "80:7:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "80:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 5,
+                      "mutability": "mutable",
+                      "name": "seller",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 19,
+                      "src": "98:22:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      },
+                      "typeName": {
+                        "id": 4,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "98:15:0",
+                        "stateMutability": "payable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 7,
+                      "mutability": "mutable",
+                      "name": "name",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 19,
+                      "src": "131:11:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      },
+                      "typeName": {
+                        "id": 6,
+                        "name": "string",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "131:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage_ptr",
+                          "typeString": "string"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 9,
+                      "mutability": "mutable",
+                      "name": "description",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 19,
+                      "src": "153:18:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      },
+                      "typeName": {
+                        "id": 8,
+                        "name": "string",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "153:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage_ptr",
+                          "typeString": "string"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 11,
+                      "mutability": "mutable",
+                      "name": "min",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 19,
+                      "src": "182:8:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 10,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "182:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 13,
+                      "mutability": "mutable",
+                      "name": "end",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 19,
+                      "src": "201:8:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 12,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "201:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 15,
+                      "mutability": "mutable",
+                      "name": "bestOfferId",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 19,
+                      "src": "220:16:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 14,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "220:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 18,
+                      "mutability": "mutable",
+                      "name": "offerIds",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 19,
+                      "src": "247:15:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                        "typeString": "uint256[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 16,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "247:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 17,
+                        "nodeType": "ArrayTypeName",
+                        "src": "247:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                          "typeString": "uint256[]"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "name": "Auction",
+                  "nodeType": "StructDefinition",
+                  "scope": 20,
+                  "src": "54:216:0",
+                  "visibility": "public"
+                }
+              ],
+              "scope": 21,
+              "src": "27:246:0"
+            }
+          ],
+          "src": "0:273:0"
+        },
+        "id": 0
+      }
+    }
+  }
+}
